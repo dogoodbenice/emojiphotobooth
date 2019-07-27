@@ -61,9 +61,9 @@ function draw() {
   ellipse(noseX,noseY,100);
   let emojiSize = 325;
   textSize(emojiSize);
-  // if (mouseIsPressed) {
-  //   emoji = random();
-  // }
+  if (mouseIsPressed) {
+    emoji = random();
+  }
   if (emoji < 0.06){
     text('🦁',noseX-140,noseY+110);
   } else if (emoji < 0.12) {
