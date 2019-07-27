@@ -1,19 +1,17 @@
 //things we'll need later
 let video;
 let poseNet;
-// let photobutton;
 let noseX = 0;
 let noseY = 0;
+let emoji = 0;
+//Maybe using the eyes?
 let lefteyeX = 0;
 let lefteyeY = 0;
 let righteyeX = 0;
 let righteyeY = 0;
-let emoji = 0;
-
 
 //setting up our canvas to work on
 function setup() {
-  textSize(20);
   var canvas = createCanvas(650,480);
   canvas.parent('sketch-holder');
   video = createCapture(VIDEO);
@@ -21,10 +19,6 @@ function setup() {
   video.hide();
   poseNet = ml5.poseNet(video, modelReady);
   poseNet.on('pose',gotPoses);
-  // photobutton = createButton('📷')
-  // photobutton.position(500,620);
-  // photobutton.mousePressed(savePhoto);
-
   //button to select your photo
   document.querySelector("button").addEventListener("click", function () {
     saveCanvas('myphoto.png');
@@ -47,13 +41,13 @@ function modelReady(){
 }
 
 function draw() {
-  background(255);
-
+  background(0);
   //In case webcam is not enabled
   push();
   fill(255);
+  textSize(20);
   text('Your webcam is needed for this experiment 🎥',150,height/2);
-  text('refresh the page to try it out',150,(height/2)+25);
+  text('refresh the page to try it',150,(height/2)+25);
   pop();
   //Image capture to place an emoji on
   image(video,0,0,650,480);
