@@ -1,4 +1,7 @@
-//things we'll need later
+//This could probably be done much better.
+//If you have suggestions to improve please do get in touch.
+
+//Some stuff we'll need later
 let video;
 let poseNet;
 let noseX = 0;
