@@ -1,5 +1,7 @@
+//for fun
+
 function setup() {
-  var canvas = createCanvas(windowWidth-250,400);
+  var canvas = createCanvas(900,400);
   canvas.parent('sketch-holder');
   textSize(20);
 }
